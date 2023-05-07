@@ -1,0 +1,32 @@
+.authentication-container {
+    display: flex;
+    justify-content: space-between;
+    margin: 30px auto;
+    div {
+        flex: 1;
+        margin: 0 5px;
+    }
+}
+
+@media screen and (max-width: 731px) {
+    .authentication-container {
+        display: block;
+        div {
+            margin: 20px;
+        }
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .authentication-container {
+        display: block;
+        .sign-in-container {
+            .buttons-container {
+                flex-direction: column;
+                button {
+                    margin: 10px 0;
+                }
+            }
+        }
+    }
+}
