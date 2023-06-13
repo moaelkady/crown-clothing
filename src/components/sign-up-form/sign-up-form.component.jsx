@@ -45,9 +45,8 @@ const SignUpForm = () => {
         password
       );
 
-      const res = await createUserDocumentFromAuth(user, { displayName });
-
-      console.log(res);
+      await createUserDocumentFromAuth(user, { displayName });
+      resetFormFields();
     } catch (err) {
       switch (err.code) {
         case "auth/weak-password":
@@ -61,8 +60,6 @@ const SignUpForm = () => {
       }
       return;
     }
-
-    resetFormFields();
   };
   return (
     <div className="sign-up-container">
